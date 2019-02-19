@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Control  Lampe</title>
+	<style type="text/css" rel="stylesheet" >
+	
+	body { 
+                     width: 800px; 
+                     background: #e6ecff;
+                     padding: 15px;
+                     padding-right: 18px; 
+                     border: solid 3px green;
+		             border-radius:10px;
+	                 margin: 50px auto; 
+                     font-family:"Times New Roman"; /*??? ?????? */
+                     font-size: 18px; /* ?????? ??????*/ 
+    
+   }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  
+}
+.pic {
+	width:100px;
+} 
+
+	
+	
+	</style>
+</head>
+
+<body>
+
+<h2> Макет разработчика из 3-х ключей </h2>
+
+<p></p>
+<div id="tabl">
+<p align="center">Lampe<img src="image/Lampe/offlampe.png" alt="off_Lampe" id="la1" onclick="lampe1()" style="width:100px"/> </p>
+    <table border="0"  > 
+      <tr><td >KA11<img src="image/KA1/OFFKA11.png" alt="Relay contact KA11" id="ka11" onclick="ka11()" class="pic"/> </td><td >KA21<img src="image/KA2/OFFKA21.png" alt="" id="ka21" onclick="ka21()" class="pic"/> </td><td> KA31 <img src="image/KA3/OFFKA31.png" alt="" id="ka31" onclick="ka31()" class="pic"/> </td></tr> 
+	  <tr><td >KA12<img src="image/KA1/OFFKA12.png" alt="" id="ka12" onclick="ka12()" class="pic" /> </td><td>KA22<img src="image/KA2/OFFKA22.png" alt="" id="ka22" onclick="ka22()" class="pic"/> </td> <td>KA32<img src="image/KA3/OFFKA32.png" alt="" id="ka32" onclick="ka32()" class="pic"/></td></tr> 
+	  <tr><td >KA13<img src="image/KA1/OFFKA13.png" alt="" id="ka13" onclick="ka13()" class="pic" /> </td><td>KA23<img src="image/KA2/OFFKA23.png" alt="" id="ka23" onclick="ka23()" class="pic"/> </td> <td>KA33<img src="image/KA3/OFFKA33.png" alt="" id="ka33" onclick="ka33()" class="pic"/></td></tr> 
+	  <tr><td> SA1<img src="image/SA1/OFFSA1.png" alt="" id="sa1" onclick="sa1()" class="pic"/> </td><td>Relay KA1  <img src="image/KA1/ROFFKA1.png" alt="" id="ka10" onclick="ka10()" class="pic"> </td></tr>
+      <tr ><td>SA2<img src="image/SA2/OFFSA2.png" alt="" id="sa2" onclick="sa2()" class="pic"/> </td><td>Relay KA2  <img src="image/KA2/ROFFKA2.png" alt="" id="ka20" onclick="ka20()" class="pic"/> </td></tr> 	  
+	  <tr><td> SA3<img src="image/SA3/OFFSA3.png" alt="" id="sa3" onclick="sa3()" class="pic"/> </td><td>Relay KA3  <img src="image/KA3/ROFFKA3.png" alt=""  id="ka30" onclick="ka30()" class="pic" />  </td></tr> 	 
+	</table>
+
+	
+	<script>
+	//=============================Lampe=============================
+	 
+    var  lampe = "svet";
+	function lampe1(){
+	var imagela1 = document.getElementById("la1");
+	if(lampe == "svet"){
+	    imagela1.src = "image/Lampe/ONLampe.png";//ON
+		lampe = "offl";//
+	}else {
+	    imagela1.src = "image/Lampe/OFFLampe.png";//OFF
+		lampe = "svet";
+	}
+	};
+	//=============================CONTACT KA1=============================
+	 //KA11
+    var  cka11 = "c11";
+	function ka11(){
+	var imageka11 = document.getElementById("ka11");
+	if(cka11 == "c11"){
+	    imageka11.src = "image/KA1/ONKA11.png";//ON
+		cka11 = "off1";//
+	}else {
+	    imageka11.src = "image/KA1/OFFKA11.png";//OFF
+		cka11 = "c11";
+	}
+	};
+	 //KA12
+    var  cka12 = "c12";
+	function ka12(){
+	var imageka12 = document.getElementById("ka12");
+	if(cka12 == "c12"){
+	    imageka12.src = "image/KA1/ONKA12.png";//ON
+		cka12 = "off2";//
+	}else {
+	    imageka12.src = "image/KA1/OFFKA12.png";//OFF
+		cka12 = "c12";
+	}
+	};
+	//KA13
+    var  cka13 = "c13";
+	function ka13(){
+	var imageka13 = document.getElementById("ka13");
+	if(cka13 == "c13"){
+	    imageka13.src = "image/KA1/ONKA13.png";//ON
+		cka13 = "off3";//
+	}else {
+	    imageka13.src = "image/KA1/OFFKA13.png";//OFF
+		cka13 = "c13";
+	}
+	};
+	//=============================CONTACT KA2===============================
+	//KA21
+    var  cka21 = "c21";
+	function ka21(){
+	var imageka21 = document.getElementById("ka21");
+	if(cka21 == "c21"){
+	    imageka21.src = "image/KA2/ONKA21.png";//ON
+		cka21 = "off21";//
+	}else {
+	    imageka21.src = "image/KA2/OFFKA21.png";//OFF
+		cka21 = "c21";
+	}
+	};
+	//KA22
+	var  cka22 = "c22";
+	function ka22(){
+	var imageka22 = document.getElementById("ka22");
+	if(cka22 == "c22"){
+	    imageka22.src = "image/KA2/ONKA22.png";//ON
+		cka22 = "off22";//
+	}else {
+	    imageka22.src = "image/KA2/OFFKA22.png";//OFF
+		cka22 = "c22";
+	}
+	};
+	//KA23
+	var  cka23 = "c23";
+	function ka23(){
+	var imageka23 = document.getElementById("ka23");
+	if(cka23 == "c23"){
+	    imageka23.src = "image/KA2/ONKA23.png";//ON
+		cka23 = "off23";//
+	}else {
+	    imageka23.src = "image/KA2/OFFKA23.png";//OFF
+		cka23 = "c23";
+	}
+	};
+	//=============================CONTACT KA3=============================
+    //KA31
+	var  cka31 = "c31";
+	function ka31(){
+	var imageka31 = document.getElementById("ka31");
+	if(cka31 == "c31"){
+	    imageka31.src = "image/KA3/ONKA31.png";//ON
+		cka31 = "off31";//
+	}else {
+	    imageka31.src = "image/KA3/OFFKA31.png";//OFF
+		cka31 = "c31";
+	}
+	};
+	//KA32
+	var  cka32 = "c32";
+	function ka32(){
+	var imageka32 = document.getElementById("ka32");
+	if(cka32 == "c32"){
+	    imageka32.src = "image/KA3/ONKA32.png";//ON
+		cka32 = "off32";//
+	}else {
+	    imageka32.src = "image/KA3/OFFKA32.png";//OFF
+		cka32 = "c32";
+	}
+	};
+	//KA33
+	var  cka33 = "c33";
+	function ka33(){
+	var imageka33 = document.getElementById("ka33");
+	if(cka33 == "c33"){
+	    imageka33.src = "image/KA3/ONKA33.png";//ON
+		cka33 = "off33";//
+	}else {
+	    imageka33.src = "image/KA3/OFFKA33.png";//OFF
+		cka33 = "c33";
+	}
+	};
+	//=============================SA=============================
+	//SA1
+	var  csa1 = "ct1";
+	var  cka10 = "c10";
+	function sa1(){
+	var imagesa1 = document.getElementById("sa1");
+	var imageka10 = document.getElementById("ka10");
+	if(csa1 == "ct1"){
+	    imagesa1.src = "image/SA1/ONSA1.png";//ON
+		imageka10.src = "image/KA1/RONKA1.png";//ON
+		csa1 = "offsa1";//
+		cka10 = "off10";//
+	}else {
+	    imagesa1.src = "image/SA1/OFFSA1.png";//OFF
+		imageka10.src = "image/KA1/ROFFKA1.png";//OFF
+		csa1 = "ct1";
+		cka10 = "c10";
+	}
+	};
+	//SA2
+	var  csa2 = "ct2";
+	var  cka20 = "c20";
+	function sa2(){
+	var image = document.getElementById("sa2");
+	var imageka20 = document.getElementById("ka20");
+	if(csa2 == "ct2"){
+	    image.src = "image/SA2/ONSA2.png";//ON
+		imageka20.src = "image/KA2/RONKA2.png";//ON
+		csa2 = "offsa2";//
+		cka20 = "off20";//
+	}else {
+	    image.src = "image/SA2/OFFSA2.png";//OFF
+		imageka20.src = "image/KA2/ROFFKA2.png";//OFF
+		csa2 = "ct2";
+		cka20 = "c20";
+	}
+	};
+	//SA3
+	var  csa3 = "ct3";
+	var  cka30 = "c30";
+	function sa3(){
+	var image = document.getElementById("sa3");
+	var imageka3 = document.getElementById("ka30");
+	if(csa3 == "ct3"){
+	    image.src = "image/SA3/ONSA3.png";//ON
+		imageka3.src = "image/KA3/RONKA3.png";//ON
+		csa3 = "offsa3";//
+		cka30 = "off30";//
+	}else {
+	    image.src = "image/SA3/OFFSA3.png";//OFF
+		imageka3.src = "image/KA3/ROFFKA3.png";//OFF
+		csa3 = "ct3";
+		cka30 = "c30";
+	}
+	};
+	//=============================RELAY KA=============================
+	//KA1
+	var  cka10 = "c10";
+	function ka10(){
+	var imageka10 = document.getElementById("ka10");
+	if(cka10 == "c10"){
+	    imageka10.src = "image/KA1/RONKA1.png";//ON
+		cka10 = "off10";//
+	}else {
+	    imageka10.src = "image/KA1/ROFFKA1.png";//OFF
+		cka10 = "c10";
+	}
+	};
+	//KA2
+	var  cka20 = "c20";
+	function ka20(){
+	var image = document.getElementById("ka20");
+	if(cka20 == "c20"){
+	    image.src = "image/KA2/RONKA2.png";//ON
+		cka20 = "off20";//
+	}else {
+	    image.src = "image/KA2/ROFFKA2.png";//OFF
+		cka20 = "c20";
+	}
+	};
+	//KA3
+	var  cka30 = "c30";
+	function ka30(){
+	var imageka3 = document.getElementById("ka30");
+	if(cka30 == "c30"){
+	    imageka3.src = "image/KA3/RONKA3.png";//ON
+		cka30 = "off30";//
+	}else {
+	    imageka3.src = "image/KA3/ROFFKA3.png";//OFF
+		cka30 = "c30";
+	}
+	};
+	
+	</script>
+	
+	<footer >
+  <p align="center" >Copyright &copy; 2019. All Rights Reserved.</p>
+</footer>
+				
+			
+	
+</body>
+</html>

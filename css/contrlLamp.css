@@ -1,0 +1,30 @@
+body { 
+                     width: 800px; 
+                     background: #e6ecff;
+                     padding: 15px;
+                     padding-right: 18px; 
+                     border: solid 3px green;
+		             border-radius:10px;
+	                 margin: 50px auto; 
+                     font-family:"Times New Roman"; /*Тип шрифта */
+                     font-size: 18px; /* Размер шрифта*/ 
+    
+   }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  
+}
+.pic {
+	width:100px;
+} 
